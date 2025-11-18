@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pas_mobile_11pplg1_21/routes/pages.dart';
 import 'package:pas_mobile_11pplg1_21/routes/routes.dart';
+import 'package:pas_mobile_11pplg1_21/controllers/auth_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(MyApp());
+  Get.put(AuthController());
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

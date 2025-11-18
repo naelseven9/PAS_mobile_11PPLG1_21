@@ -21,7 +21,7 @@ class NavigatorBottomPage extends StatelessWidget {
     return Obx(
       () => Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xFFFFCC80), // oranye lembut
+          backgroundColor: const Color(0xFFFFCC80),
           title: Text(
             c.titles[c.currentIndex.value],
             style: const TextStyle(color: Colors.brown),
@@ -29,7 +29,7 @@ class NavigatorBottomPage extends StatelessWidget {
         ),
         body: pages[c.currentIndex.value],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: const Color(0xFFFFF3E0), // cream terang
+          backgroundColor: const Color(0xFFFFF3E0),
           currentIndex: c.currentIndex.value,
           selectedItemColor: Colors.orangeAccent,
           unselectedItemColor: Colors.brown,
@@ -40,7 +40,7 @@ class NavigatorBottomPage extends StatelessWidget {
               label: "Dashboard",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border),
+              icon: Icon(Icons.bookmark_outline),
               label: "Favorite",
             ),
             BottomNavigationBarItem(

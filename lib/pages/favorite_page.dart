@@ -13,7 +13,6 @@ class FavoritePage extends StatelessWidget {
         title: const Text("Favorite Products"),
       ),
       body: Obx(() {
-        // Cek jika list favorite kosong
         if (controller.favoriteProducts.isEmpty) {
           return const Center(
             child: Text(
@@ -22,8 +21,6 @@ class FavoritePage extends StatelessWidget {
             ),
           );
         }
-
-        // List produk favorit
         return ListView.builder(
           itemCount: controller.favoriteProducts.length,
           itemBuilder: (context, index) {
@@ -43,7 +40,6 @@ class FavoritePage extends StatelessWidget {
                 trailing: IconButton(
                   icon: const Icon(Icons.delete, color: Colors.redAccent),
                   onPressed: () {
-                    // Hapus dari favorite
                     controller.removeFromFavorite(product);
                     Get.snackbar(
                       "Removed",

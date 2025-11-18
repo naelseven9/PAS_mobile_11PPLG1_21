@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pas_mobile_11pplg1_21/models/FakestoreModel.dart';
 import '../controllers/dashboard_controller.dart';
-import 'favorite_page.dart'; // nanti dibuat
+import 'favorite_page.dart';
 
 class DashboardPage extends StatelessWidget {
   final DashboardController controller = Get.put(DashboardController());
@@ -46,7 +46,7 @@ class DashboardPage extends StatelessWidget {
                 title: Text(product.title),
                 subtitle: Text("\$${product.price.toString()}"),
                 trailing: IconButton(
-                  icon: const Icon(Icons.add, color: Colors.red),
+                  icon: const Icon(Icons.bookmark_add_outlined, color: Colors.red),
                   onPressed: () {
                     controller.addToFavorite(product);
                     Get.snackbar(

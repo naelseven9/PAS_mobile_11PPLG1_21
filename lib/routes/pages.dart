@@ -46,11 +46,11 @@ class AppPages {
     ),
 
 
-    // GetPage(
-    // name: AppRoutes.register,
-    // page: () => RegisterPage(),
-    // binding: RegisterBinding(),
-    // ),
+    GetPage(
+    name: AppRoutes.register,
+    page: () => RegisterPage(),
+    binding: RegisterBinding(),
+    ),
 
   ];
 }

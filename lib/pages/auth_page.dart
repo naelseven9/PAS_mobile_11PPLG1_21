@@ -1,12 +1,16 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import '../controllers/auth_controller.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:pas_mobile_11pplg1_21/controllers/auth_controller.dart';
+import 'package:pas_mobile_11pplg1_21/routes/routes.dart';
 
 class AuthPage extends StatelessWidget {
   AuthPage({super.key});
 
-  final AuthController controller = Get.put(AuthController());
+  final AuthController controller = Get.find<AuthController>();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +50,7 @@ class AuthPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     const Text(
-                      "Login untuk masuk ke Aplikssi",
+                      "Login untuk masuk ke Aplikasi",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
@@ -56,7 +60,7 @@ class AuthPage extends StatelessWidget {
                     const SizedBox(height: 30),
 
                     TextField(
-                      controller: controller.usernameController,
+                      controller: controller.username,
                       decoration: InputDecoration(
                         labelText: "Username",
                         labelStyle: const TextStyle(color: Color(0xFF8D6E63)),
@@ -71,7 +75,7 @@ class AuthPage extends StatelessWidget {
                     const SizedBox(height: 16),
 
                     TextField(
-                      controller: controller.passwordController,
+                      controller: controller.password,
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: "Password",
@@ -142,6 +146,20 @@ class AuthPage extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                    TextButton(
+                      onPressed: () {
+                        Get.offAllNamed(AppRoutes.register);
+                      },
+                      child: const Text(
+                        "Belum punya akun? Daftar",
+                        style: TextStyle(
+                          color: Color(0xFFFFA726),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),

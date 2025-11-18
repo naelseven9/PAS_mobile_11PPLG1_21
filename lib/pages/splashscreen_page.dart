@@ -4,7 +4,7 @@ import 'package:pas_mobile_11pplg1_21/controllers/splashscreen_controller.dart';
 
 class SplashscreenPage extends StatelessWidget {
   SplashscreenPage({super.key});
-  final SplashscreenController controller = Get.find<SplashscreenController>();
+  final SplashScreenController controller = Get.find<SplashScreenController>();
 
   @override
   Widget build(BuildContext context) {

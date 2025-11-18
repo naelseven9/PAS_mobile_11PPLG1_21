@@ -1,7 +1,7 @@
 class LoginModel {
   bool status;
   String message;
-  String? token; // ubah jadi nullable
+  String? token;
 
   LoginModel({
     required this.status,
